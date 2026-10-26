@@ -36,24 +36,30 @@ cd frontend && npm install
 bin/,obj/ - build output.
 
 Frontend Files: 
-index.html - main file browser open this file first.
-main.tsx - entrypoint for javascript code.
+1.index.html - main file browser open this file first.
+2.main.tsx - entrypoint for javascript code.
 ---
 in index.html file <div> empty container then script tag tells browser to load main.
 <script type="module" src="/src/main.tsx"></script>
 main file it renders react app.
 createRoot(documnet.getElementById('root')!).render(<App />)
 ---
-app.tsx - root react component -SPA
-assets - styles and images
-package.json - dependencies and scripts ?????
-ESLint and oxlint are linters- reads the code withoout running it  and flags likely bugs and style problems.
-package-lock.json - records exact versions of every package
-vite.config.ts - configures vite-
+3.app.tsx - root react component -SPA
+4.assets - styles and images
+5.package.json - dependencies and scripts ?????
+6.ESLint and oxlint are linters- reads the code withoout running it  and flags likely bugs and style problems.
+7.package-lock.json - records exact versions of every package
+8.vite.config.ts - configures vite-
 =React plugin- handles jsx and hot reload
 =proxy - frontend calls /api and forwarded to .net through port 5210
 or custom port
-eslint.config.js - it holds ESLint rules.
-public - holds static files
-dist - build file -npm run build
-node_modules - npm i -consist all downloaded packages.
+9.eslint.config.js - it holds ESLint rules.
+10.public - holds static files
+11.dist - build file -npm run build
+12.node_modules - npm i -consist all downloaded packages.
+-------------------------------
+Migrations : 
+-add packages - 
+dotnet add package npgsql.EntityFrameworkCore.PostgreSQL - EFCore speak to postgres
+dotnet add package Microsoft.EntityFrameworkCore.Design - need for migrations
+dotnet tool install --global dotnet-ef - command line tool-(add,update db)
