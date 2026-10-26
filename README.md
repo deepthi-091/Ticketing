@@ -63,3 +63,11 @@ Migrations :
 dotnet add package npgsql.EntityFrameworkCore.PostgreSQL - EFCore speak to postgres
 dotnet add package Microsoft.EntityFrameworkCore.Design - need for migrations
 dotnet tool install --global dotnet-ef - command line tool-(add,update db)
+
+-----
+Entities : 
+for every table - one entity class
+public class entity_name {
+    public type Property_name {get;set;}
+}
+get - to get a value and set - set a value
